@@ -1,0 +1,44 @@
+<div class="booking-form-container">
+  <h2 mat-dialog-title>Időpont foglalás</h2>
+  
+  <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Teljes név</mat-label>
+      <input matInput formControlName="name" required>
+      <mat-error *ngIf="bookingForm.get('name')?.hasError('required')">
+        A név megadása kötelező
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email cím</mat-label>
+      <input matInput formControlName="email" required type="email">
+      <mat-error *ngIf="bookingForm.get('email')?.hasError('required')">
+        Az email cím megadása kötelező
+      </mat-error>
+      <mat-error *ngIf="bookingForm.get('email')?.hasError('email')">
+        Érvénytelen email cím
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Telefonszám</mat-label>
+      <input matInput formControlName="phone" required>
+      <mat-error *ngIf="bookingForm.get('phone')?.hasError('required')">
+        A telefonszám megadása kötelező
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Megjegyzés</mat-label>
+      <textarea matInput formControlName="notes" rows="4"></textarea>
+    </mat-form-field>
+
+    <div class="form-actions">
+      <button mat-button mat-dialog-close type="button">Mégse</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!bookingForm.valid">
+        Foglalás
+      </button>
+    </div>
+  </form>
+</div> 
