@@ -1,0 +1,30 @@
+<div *ngIf="orvosNev" class="container">
+  <h2>{{ orvosNev }}</h2>
+
+  <table class="idopontok-table">
+    <thead>
+    <tr>
+      <th>Nap</th>
+      <th>Idő</th>
+      <th>Állapot</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let ido of getIdopontok(orvosNev); let i = index">
+      <td>{{ ido.nap }}</td>
+      <td>{{ ido.ido }}</td>
+      <td>
+          <span [ngClass]="{ 'foglalt': ido.allapot === 'Foglalt', 'szabad': ido.allapot === 'Szabad' }">
+            {{ ido.allapot }}
+          </span>
+      </td>
+      <td>
+        <button *ngIf="ido.allapot === 'Szabad'" (click)="foglalIdopont(orvosNev, i)" class="foglalas-btn">
+          Foglalás
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

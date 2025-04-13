@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="wrapper">
+  <h2>Adja meg adatait: </h2>
+  <form action="#">
+    <div class="input-box">
+      Adja meg vezetéknevét:
+      <input matNativeControl type="text" placeholder="Kiss" required>
+    </div>
+    <div class="input-box">
+      Adja meg keresztnevét:
+      <input type="text" placeholder="Bence" required>
+    </div>
+    <div class="input-box">
+      Adja meg az E-mail címét:
+      <input type="text" placeholder="Enter your email" required>
+    </div>
+    <div class="input-box">
+      Adja meg a TAJ számát:
+      <input type="text" placeholder="TAJ" required>
+    </div>
+    <div class="input-box">
+      Adja meg a Születési Dátumát:
+      <input type="date" placeholder="2001.09.12" required>
+    </div>
+    <div class="next">
+      <button mat-button type="submit" (click)="changePage()">Tovább</button>
+    </div>
+
+  </form>
+</div>
+</body>
+</html>

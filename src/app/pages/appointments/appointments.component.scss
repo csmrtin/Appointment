@@ -1,0 +1,84 @@
+h2 {
+  align-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+.betegseg-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+
+.betegseg-lista button:hover {
+  background-color: #ccc;
+}
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #776464;
+  cursor: pointer;
+  display: compact;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #b89d9d;
+
+}
+.mat-button {
+  color: white;
+}
+.ngbutton{
+  color: white;
+}
+.betegsegek{
+  color: white;
+}
+
+button.kivalasztott {
+  background-color: #6c4c3d;
+  color: white;
+  font-weight: bold;
+}
+.kivalasztott-info,
+.orvos-lista {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 400px;
+}
+button{
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 100%;
+  --mat-sys-primary: white
+}
+.betegseg-lista {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.betegseg-lista button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #816262;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.betegseg-lista button.kivalasztott {
+  background-color: #4a3939;
+  color: white;
+}
+

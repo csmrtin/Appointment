@@ -1,0 +1,75 @@
+.elso{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px 20px;
+  justify-content: center;
+
+}
+h1{
+  color: #613a3a;
+  font-size: 35px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+p{
+  color: slategray;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.reserve{
+  background-color: #4a3939;
+  width: 250px;
+  margin: 0 auto;
+  color: antiquewhite;
+  border: none;
+  border-radius: 12px;
+  padding : 20px 10px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.reserve:hover{
+  background-color: #816262;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5e9db;
+}
+
+.navbar {
+  background-color: #6f4d4d;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.5s;
+
+}
+
+.nav-links li a:hover {
+  background-color: #8b5e5e;
+}
+

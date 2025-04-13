@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Válasszon betegséget:</h2>
+
+  <div class="betegseg-lista">
+    <button mat-button class="betegsegek"
+      *ngFor="let betegseg of betegsegek; let i = index"
+      (click)="valasszBetegseget(betegseg, i)"
+      [ngClass]="{ 'kivalasztott': betegseg === kivalasztottBetegseg }">
+      {{ betegseg }}
+    </button>
+  </div>
+
+  <div *ngIf="kivalasztottBetegseg" class="kivalasztott-info">
+    <p>Kiválasztott betegség: <strong>{{ kivalasztottBetegseg }}</strong></p>
+  </div>
+
+  <div *ngIf="megjelenitettOrvosok.length > 0" class="orvos-lista">
+    <h3>Válasszon egy Orvost:</h3>
+    <div class="orvos-gombok">
+      <button mat-button class="ngbutton" *ngFor="let orvos of megjelenitettOrvosok" (click)="ugorjOrvoshoz(orvos)">
+        {{ orvos }}
+      </button>
+    </div>
+
+  </div>
+</div>
